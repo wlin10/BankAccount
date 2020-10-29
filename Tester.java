@@ -7,7 +7,7 @@ public class Tester{
 // Getters and Setter
     System.out.println(test.getBalance());
     System.out.println(test.getAccountID());
-    test.setPassword("somenewpassword");
+    test.setPassword("newpassword");
 
 // Deposit tests
     System.out.println(test.deposit(-20));
@@ -19,6 +19,18 @@ public class Tester{
     System.out.println(test.deposit(-10));
     System.out.println(test.getBalance());
     System.out.println(test.deposit(0));
+    System.out.println(test.getBalance());
+
+// Withdrawal tests
+    System.out.println(test.withdraw(-20));
+    System.out.println(test.getBalance());
+    System.out.println(test.withdraw(49.50));
+    System.out.println(test.getBalance());
+    System.out.println(test.withdraw(25.50));
+    System.out.println(test.getBalance());
+    System.out.println(test.withdraw(-10));
+    System.out.println(test.getBalance());
+    System.out.println(test.withdraw(0));
     System.out.println(test.getBalance());
 
   }
