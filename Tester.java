@@ -9,6 +9,8 @@ public class Tester{
     System.out.println(test.getAccountID());
     test.setPassword("newpassword");
 
+    System.out.println(test.toString());
+
 // Deposit tests
     System.out.println(test.deposit(-20));
     System.out.println(test.getBalance());
@@ -20,6 +22,8 @@ public class Tester{
     System.out.println(test.getBalance());
     System.out.println(test.deposit(0));
     System.out.println(test.getBalance());
+
+    System.out.println(test.toString());
 
 // Withdrawal tests
     System.out.println(test.withdraw(-20));
@@ -33,5 +37,7 @@ public class Tester{
     System.out.println(test.withdraw(0));
     System.out.println(test.getBalance());
 
+    System.out.println(test.toString());
+    
   }
 }
