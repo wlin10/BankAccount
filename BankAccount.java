@@ -4,8 +4,12 @@ public class BankAccount{
   private int accountID;
   private String password;
 
-  public BankAccount(double b, int a, String p) {
-    balance = b;
+  public String toString() {
+    return (accountID + "\t" + balance);
+  }
+
+  public BankAccount(int a, String p) {
+    double balance = 0;
     accountID = a;
     password = p;
   }
@@ -18,8 +22,16 @@ public class BankAccount{
     return accountID;
   }
 
-  public void setPassword(String pass) {
-    password = pass;
+  public void setPassword(String newPass) {
+    password = newPass;
+  }
+
+  public boolean deposit(double amount) {
+    if (amount >= 0) {
+      balance += amount;
+      return true;
+    }
+    return false;
   }
 
 }
