@@ -6,13 +6,13 @@ public class BankAccount{
 
 
   public String toString() {
-    return (accountID + "\t" + balance);
+    return ("#" + accountID + "\t" + "$" + balance);
   }
 
-  public BankAccount(int a, String p) {
+  public BankAccount(int accountID, String password) {
     double balance = 0;
-    accountID = a;
-    password = p;
+    this.accountID = accountID;
+    this.password = password;
   }
 
   public double getBalance() {
@@ -25,6 +25,10 @@ public class BankAccount{
 
   public void setPassword(String newPass) {
     password = newPass;
+  }
+
+  private boolean authenticate(String password) {
+    return (this.password.equals(password));
   }
 
   public boolean deposit(double amount) {
@@ -44,5 +48,8 @@ public class BankAccount{
     }
   }
 
+  public boolean transferTo(BankAccount other, double amount, String password) {
+    return (authenticate(password) && withdraw(amount) && other.deposit(amount));
+  }
 
 }
