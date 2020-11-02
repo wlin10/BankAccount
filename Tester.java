@@ -3,6 +3,8 @@ public class Tester{
 
 // Account
     BankAccount test = new BankAccount(123456789, "password");
+    BankAccount b1 = new BankAccount(1000001, "abc123");
+    BankAccount b2 = new BankAccount(1000231, "abcasdg23");
 
 // Getters and Setter
     System.out.println(test.getBalance());
@@ -38,6 +40,6 @@ public class Tester{
     System.out.println(test.getBalance());
 
     System.out.println(test.toString());
-    
+
   }
 }
